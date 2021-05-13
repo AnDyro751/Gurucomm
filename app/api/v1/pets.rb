@@ -7,31 +7,27 @@ module V1
   class Pets < Grape::API
     format :json
     prefix :api
-    # rescue_from ActiveRecord::RecordNotFound, rescue_subclasses: false do |e|
-    # end
+    helpers do
+      # @return [Error]
+      # @param [String] status
+      # @param [String] message
+      def render_error(status, message)
+        error!({
+                   status: status,
+                   message: message,
+               }, status)
+      end
+    end
     rescue_from :all, rescue_subclasses: false do |e|
-      # puts "#{e}"
       error_class = e.class.to_s
       if error_class == "NameError"
-        error!({
-                   status: 500,
-                   message: e,
-               }, 500)
+        render_error(500, e.message)
       elsif error_class == "ActiveRecord::RecordNotFound"
-        error!({
-                   status: 404,
-                   message: e.message,
-               }, 404)
+        render_error(404, e.message)
       elsif error_class == "ActiveRecord::RecordInvalid"
-        error!({
-                   status: 422,
-                   message: e.message,
-               }, 422)
+        render_error(422, e.message)
       else
-        error!({
-                   status: e.status,
-                   message: e.message,
-               }, e.status)
+        render_error(500, e.message)
       end
     end
     namespace :v1 do
@@ -43,14 +39,15 @@ module V1
         end
         # @return [ActiveRecord::Relation<Pet>]
         get do
-          page = params[page].nil? ? 1 : params[:page]
-          limit = params[:limit].nil? || params[:limit] <= 0 ? 30 : params[:limit]
-          error!({code: 400, message: 'Max limit is 100'}, 400) if limit > 100
-          error!({code: 400, message: 'Minimum limit is 1'}, 400) if limit <= 0
-          error!({code: 400, message: 'Minimum page is 1'}, 400) if page <= 0
+          page = params[:page].nil? ? 1 : params[:page]
+          limit = params[:limit].nil? ? 30 : params[:limit]
+          render_error(400, 'Max limit is 100') if limit > 100
+          render_error(400, 'Minimum limit is 1') if limit <= 0
+          render_error(400, 'Minimum page is 1') if page <= 0
+
           records = Pet.all.paginate(per_page: limit, page: page)
           header 'X-Next', create_next_url(request.url, records.next_page)
-          records
+          present records, with: API::Entities::Pet
         end
 
         desc 'Info for a specific pet'
@@ -60,7 +57,7 @@ module V1
         # @return [Pet]
         route_param :id do
           get do
-            Pet.find(params["id"])
+            present Pet.find(params[:id]), with: API::Entities::Pet
           end
         end
       end
