@@ -1,0 +1,19 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'bin/*'
+    - 'test/**/*'
+    - 'config/**/*'
+    - 'app/channels/**/*'
+    - 'config.ru'
+    - 'db/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+  TargetRubyVersion: 2.5
+
+Style/Documentation:
+  Enabled: false
