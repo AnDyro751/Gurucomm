@@ -57,6 +57,7 @@ module V1
         params do
           requires :id
         end
+        # @return [Pet]
         route_param :id do
           get do
             Pet.find(params["id"])
