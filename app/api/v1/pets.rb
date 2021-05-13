@@ -8,9 +8,9 @@ module V1
     format :json
     prefix :api
     helpers do
-      # @return [Error]
       # @param [String] status
       # @param [String] message
+      # @return [Error]
       def render_error(status, message)
         error!({
                    status: status,
