@@ -1,5 +1,6 @@
 require 'active_support/core_ext/integer/time'
-
+require 'grape'
+require 'grape/route_helpers'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
