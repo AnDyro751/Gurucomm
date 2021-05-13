@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Pet, type: :model do
   let!(:pet_name) {
-    Faker::Name.first_name
+    attributes_for(:pet)[:name]
   }
   let(:pet_attributes) {
-    {name: pet_name, tag: "Demo Tag"}
+    {tag: attributes_for(:pet)[:tag], name: pet_name}
   }
   subject {
     described_class.new(pet_attributes)

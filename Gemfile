@@ -36,6 +36,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 5.0.0'
   gem 'factory_bot'
+  gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
@@ -59,6 +60,8 @@ group :test do
   gem 'grape-entity-matchers'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
+  gem 'rack-test'
+  gem 'database_cleaner-active_record'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
