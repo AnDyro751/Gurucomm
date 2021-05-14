@@ -62,6 +62,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'rack-test'
   gem 'database_cleaner-active_record'
+  gem 'rspec-json_expectations'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

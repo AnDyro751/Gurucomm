@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Pet, type: :model do
   let!(:pet_name) {
-    attributes_for(:pet)[:name]
+    Faker::Name.first_name
   }
   let(:pet_attributes) {
-    {tag: attributes_for(:pet)[:tag], name: pet_name}
+    {tag: "dog", name: pet_name}
   }
   subject {
     described_class.new(pet_attributes)
@@ -24,7 +24,7 @@ RSpec.describe Pet, type: :model do
   end
   it 'should check tag' do
     subject.save!
-    expect(subject.tag).to eq("Demo Tag")
+    expect(subject.tag).to eq("dog")
   end
   it "should be invalid when the pet is not passed attributes" do
     expect(Pet.new).to be_invalid

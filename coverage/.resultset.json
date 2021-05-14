@@ -1,173 +1,227 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/angel/Code/RB/test_api_4/app/api/api.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/api/pets.rb": [
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        2,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null,
-        2,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        2,
-        2,
-        2,
-        null,
-        null,
-        2,
-        2,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/helpers/create_next_url.rb": [
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/helpers/application_helper.rb": [
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/models/pet.rb": [
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/models/application_record.rb": [
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/api/entities/pet.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/angel/Code/RB/test_api_4/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/angel/Code/RB/test_api_4/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/angel/Code/RB/test_api_4/app/jobs/application_job.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ]
+      "/home/angel/Code/RB/test_api_4/app/api/api.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/api/pets.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          2,
+          11,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          9,
+          null,
+          null,
+          null,
+          1,
+          8,
+          8,
+          8,
+          null,
+          1,
+          null,
+          5,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          2,
+          11,
+          11,
+          11,
+          10,
+          9,
+          null,
+          8,
+          8,
+          8,
+          null,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          2,
+          2,
+          9,
+          7,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/helpers/create_next_url.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          1,
+          8,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/helpers/application_helper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/models/pet.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/api/entities/pet.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/angel/Code/RB/test_api_4/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/angel/Code/RB/test_api_4/app/jobs/application_job.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
     },
-    "timestamp": 1620940250
+    "timestamp": 1620967053
   }
 }

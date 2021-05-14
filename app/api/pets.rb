@@ -15,15 +15,23 @@ module Pets
                    message: message,
                }, status)
       end
+
+      # @return [ActionController::Parameters]
+      def pet_params
+        ActionController::Parameters.new(params).require(:pet).permit(:name, :tag)
+      end
+
     end
     rescue_from :all, rescue_subclasses: false do |e|
       error_class = e.class.to_s
-      if error_class == "NameError"
-        render_error(500, e.message)
-      elsif error_class == "ActiveRecord::RecordNotFound"
+      puts "#{error_class}----------"
+      case error_class
+      when "ActiveRecord::RecordNotFound"
         render_error(404, e.message)
-      elsif error_class == "ActiveRecord::RecordInvalid"
+      when "ActiveRecord::RecordInvalid"
         render_error(422, e.message)
+      when "ActionController::ParameterMissing"
+        render_error(400, "Param is missing")
       else
         render_error(500, e.message)
       end
@@ -57,6 +65,18 @@ module Pets
           present Pet.find(params[:id]), with: API::Entities::Pet
         end
       end
+
+      desc 'Create a pet'
+      post do
+        @pet = Pet.new(pet_params)
+        if @pet.save!
+          status 201
+          present @pet, with: API::Entities::Pet
+        else
+          render_error(422, @pet.errors.full_message)
+        end
+      end
+
     end
   end
 end
