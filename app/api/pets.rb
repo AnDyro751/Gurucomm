@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 include CreateNextUrl
 module Pets
-
   ##
   # This class mount a Pets api
   class API < Grape::API

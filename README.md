@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Instalación
 
-Things you may want to cover:
+```
+bundle install
+```
 
-* Ruby version
+### Base de datos
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* System dependencies
+### Test
 
-* Configuration
+```
+rspec
+```
 
-* Database creation
+### Coverage
+```
+xdg-open coverage/index.html 
+```
 
-* Database initialization
+### Arrancar servidor
+```
+rails s
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Documentación
+https://documenter.getpostman.com/view/6118565/TzRVfmqz#e701f3a6-a182-482e-aaf8-9bb46efaa08f
