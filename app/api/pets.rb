@@ -24,7 +24,6 @@ module Pets
     end
     rescue_from :all, rescue_subclasses: false do |e|
       error_class = e.class.to_s
-      puts "#{error_class}----------"
       case error_class
       when "ActiveRecord::RecordNotFound"
         render_error(404, e.message)

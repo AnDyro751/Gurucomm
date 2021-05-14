@@ -40,7 +40,6 @@
           1,
           8,
           8,
-          8,
           null,
           1,
           null,
@@ -135,6 +134,45 @@
           null
         ]
       },
+      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/channel.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/connection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/jobs/application_job.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/angel/Code/RB/test_api_4/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/angel/Code/RB/test_api_4/app/models/pet.rb": {
         "lines": [
           null,
@@ -155,6 +193,14 @@
           null
         ]
       },
+      "/home/angel/Code/RB/test_api_4/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
       "/home/angel/Code/RB/test_api_4/app/api/entities/pet.rb": {
         "lines": [
           1,
@@ -163,65 +209,8 @@
           null,
           null
         ]
-      },
-      "/home/angel/Code/RB/test_api_4/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/angel/Code/RB/test_api_4/app/mailers/application_mailer.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/angel/Code/RB/test_api_4/app/jobs/application_job.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/channel.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/angel/Code/RB/test_api_4/app/channels/application_cable/connection.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1620967053
+    "timestamp": 1620968422
   }
 }
